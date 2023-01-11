@@ -7,7 +7,7 @@ class Search extends Component {
 
   render(){
     return(
-      <div>Search goes here.</div>
+      <div id='search'>Search goes here.</div>
     )
   }
 }

@@ -7,7 +7,7 @@ class Calculate extends Component {
 
   render(){
     return(
-      <div>Calculate goes here.</div>
+      <div id='calculute'>Calculate goes here.</div>
     )
   }
 }
