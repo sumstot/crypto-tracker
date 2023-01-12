@@ -11,7 +11,7 @@ class Calculate extends Component {
           <h1>How much {this.props.active_currency.name} do you own</h1>
           <form onSubmit={this.props.handleSubmit}>
             <div className='form-group'>
-              <label>Enter Amount Ownder</label><br/>
+              <label>Enter Amount Owned</label><br/>
               <input onChange={this.props.handleChange} autoComplete="off" type="text" name="amount" placeholder="How much do you own?" value={this.props.name} className="field"></input>
             </div>
             <div className='form-group'>
