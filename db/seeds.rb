@@ -12,6 +12,8 @@
 # rails g model Currency name max_supply:bigint currency_symbol slug
 # rails db:migrate
 # rails db:seed
+Currency.destroy_all
+
 coins = []
 url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=200&aux=cmc_rank,max_supply,total_supply"
 request = HTTParty.get(url, headers: { "X-CMC_PRO_API_KEY" => Rails.application.credentials.dig(:pro_api_key)}
@@ -25,8 +27,6 @@ new_coinmarketcap_map.each do |coin|
   coins << new_coin
 end
 
-currencies = Currency.create(
+Currency.create(
   coins
 )
-
-p currencies
