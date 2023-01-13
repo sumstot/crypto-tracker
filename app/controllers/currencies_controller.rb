@@ -3,7 +3,7 @@ class CurrenciesController < ApplicationController
   end
 
   def search
-    @currencies = Currency.where('LOWER(name) LIKE ?', "%#{params[:search].downcase}")
+    @currencies = Currency.where('LOWER(name) LIKE ?', "%#{params[:search].downcase}").or(Currency.where('LOWER(currency_symbol) LIKE ?', "%#{params[:search].downcase}"))
     render json: { currencies: @currencies }
   end
 
