@@ -15,7 +15,7 @@
     "webpack-dev-server": "^3"
   },
   "engines": {
-    "node": "19.3.0"
+    "node": "19.3.0 --openssl-legacy-provider"
   }
 
 }
