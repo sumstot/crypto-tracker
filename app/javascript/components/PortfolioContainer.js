@@ -27,7 +27,7 @@ class PortfolioContainer extends Component {
     //   [e.target.name]: e.target.value
     // })
 
-    axios.post('http://localhost:3000/search', {
+    axios.post('https://coinmarketcap-crypto-app.herokuapp.com/search', {
       // name: this.state.name
       search: e.target.value
     })
@@ -56,7 +56,7 @@ class PortfolioContainer extends Component {
     e.preventDefault()
     let currency = this.state.active_currency
     let amount = this.state.amount
-    axios.post('http://localhost:3000/calculate', {
+    axios.post('https://coinmarketcap-crypto-app.herokuapp.com/calculate', {
       id: currency.id,
       amount: amount
     })

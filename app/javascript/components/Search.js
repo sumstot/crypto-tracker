@@ -13,7 +13,7 @@ class Search extends Component {
         <form>
           <div className='form-group'>
             <label>Search for a coin</label><br/>
-            <input onChange={this.props.handleChange} autoComplete="off" type="text" name="name" placeholder="Bitcoin, Ethereum, Polkadot..." value={this.props.name} className="field"></input>
+            <input onChange={this.props.handleChange} autoComplete="off" type="text" name="name" placeholder="Bitcoin (BTC), Ethereum (ETH), Polkadot (DOT)..." value={this.props.name} className="field"></input>
           </div>
           <div className='currency-list'>
             {searchResults}

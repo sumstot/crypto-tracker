@@ -23,7 +23,7 @@ coinmarketcap_map = response['data']
 new_coinmarketcap_map = coinmarketcap_map.flatten
 
 new_coinmarketcap_map.each do |coin|
-  new_coin = { name: coin['name'], currency_symbol: coin['symbol'], max_supply: coin['max_supply'], slug: coin['slug']}
+  new_coin = { name: coin['name'], currency_symbol: coin['symbol'], max_supply: coin['max_supply'], slug: coin['slug'] }
   coins << new_coin
 end
 
