@@ -16,7 +16,7 @@ Currency.destroy_all
 
 coins = []
 url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=200&aux=cmc_rank,max_supply,total_supply"
-request = HTTParty.get(url, headers: { "X-CMC_PRO_API_KEY" => "9ac37212-0c8e-46fb-8a77-29993a66bc3f" }
+request = HTTParty.get(url, headers: { "X-CMC_PRO_API_KEY" => Rails.application.credentials.dig(:coin_tracker) }
 )
 response = JSON.parse(request.body)
 coinmarketcap_map = response['data']

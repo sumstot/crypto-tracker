@@ -6,7 +6,7 @@ class Currency < ApplicationRecord
 
   def current_price
     url = "https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest?slug=#{self.slug}"
-    request = HTTParty.get(url, headers: { 'X-CMC_PRO_API_KEY' => "9ac37212-0c8e-46fb-8a77-29993a66bc3f" }
+    request = HTTParty.get(url, headers: { 'X-CMC_PRO_API_KEY' => Rails.application.credentials.dig(:coin_tracker) }
   )
     response = JSON.parse(request.body)
     current_price = response['data'].values[0]['quote']['USD']['price']
